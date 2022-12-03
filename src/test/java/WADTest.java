@@ -2,8 +2,9 @@ import io.appium.java_client.windows.WindowsDriver;
 import org.apache.commons.io.FileUtils;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -42,7 +43,7 @@ public class WADTest {
         return date.toString();
     }
 
-    @BeforeClass
+    @BeforeAll
     public static void setUp() {
         try {
             DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -65,7 +66,7 @@ public class WADTest {
 //        setUp();
 //    }
 
-    @AfterClass
+    @AfterAll
     public static void tearDown() {
 
 //        chromeSession.quit();
